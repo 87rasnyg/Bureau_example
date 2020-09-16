@@ -23,15 +23,18 @@ class Program
                 System.Console.WriteLine("Tömmer byrån på " + contents);
                 contents = "";
             }
-            else
+            else if (input != "")
             {
-                if (contents.Length == 0)
                 {
-                    contents = input.Trim();
-                }
-                else
-                {
-                    contents = contents + " och " + input.Trim();
+                    if (contents.Length == 0)
+                    {
+                        contents = input.Trim();
+                    }
+                    else
+                    {
+                        contents = contents.Replace(" och", ",");
+                        contents = contents + " och " + input.Trim();
+                    }
                 }
             }
 
