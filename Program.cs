@@ -25,16 +25,14 @@ class Program
             }
             else if (input != "")
             {
+                if (contents.Length == 0)
                 {
-                    if (contents.Length == 0)
-                    {
-                        contents = input.Trim();
-                    }
-                    else
-                    {
-                        contents = contents.Replace(" och", ",");
-                        contents = contents + " och " + input.Trim();
-                    }
+                    contents = input.Trim();
+                }
+                else
+                {
+                    contents = contents.Replace(" och", ",");
+                    contents = contents + " och " + input.Trim();
                 }
             }
 
